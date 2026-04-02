@@ -56,12 +56,7 @@ Edit the following sections in `index.html`:
 - **Email Address** — Replace `contact@achakzai04.com` with your email.
 - **Location** — Update `Karachi / Lahore` as needed.
 
-### 2. Social Media Links
+📄 License
 
-Find these blocks and update the `href` attributes:
-
-```html
-<a href="https://www.facebook.com/IsrarUmari" target="_blank">...</a>
-<a href="https://youtube.com/channel/UCgVFLE4jdCyPMWnNQJA12uA?sub-confirmation=1" target="_blank">...</a>
-<a href="https://www.instagram.com/israr_umari?igsh=MWN6cmdzaDluaXM4bQ==" target="_blank">...</a>
-<a href="https://wa.me/923308363433" target="_blank">...</a>
+This project is free to use for personal and commercial purposes.
+© 2025 Achakzai 04 — All rights reserved.
