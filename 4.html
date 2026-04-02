@@ -1,0 +1,782 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Achakzai 04 | Web Dev & Mobile Repair Expert — Blue Lovely Theme</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0a2540;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+      /* NEW LOVELY BLUE THEME: Soft sky-to-mist gradient */
+      background: linear-gradient(145deg, #eef5ff 0%, #e0edfc 40%, #f0f7ff 100%);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* header & navigation — matching blue soft theme */
+    header {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(52, 102, 153, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4a76, #2c7da0, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .logo span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: block;
+      color: #2c5f8a;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e3a5f;
+      transition: 0.2s;
+      font-size: 1rem;
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover {
+      color: #2c7da0;
+    }
+
+    .btn-header {
+      background: #1e4a76;
+      color: white;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: 0.25s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(30, 74, 118, 0.2);
+    }
+
+    .btn-header:hover {
+      background: #2c7da0;
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(44, 125, 160, 0.25);
+    }
+
+    /* hero — airy blue */
+    .hero {
+      padding: 70px 0 60px;
+      background: linear-gradient(120deg, #eef5ff 0%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badge {
+      background: #d9effa;
+      color: #1e6f9f;
+      padding: 5px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1e4a76;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #2c5282;
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1e4a76;
+    }
+
+    .hero-image div {
+      background: #e3f0fa;
+      border-radius: 60px;
+      padding: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #1e4a76;
+      color: white;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-block;
+      box-shadow: 0 5px 12px rgba(30, 74, 118, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #2c7da0;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e4a76;
+      color: #1e4a76;
+      padding: 10px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: #eef5ff;
+      border-color: #2c7da0;
+      color: #2c7da0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #1e4a76;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #2c5f8a;
+      max-width: 680px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+    }
+
+    .services {
+      padding: 80px 0;
+      background: rgba(230, 243, 255, 0.5);
+    }
+
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: #ffffffdb;
+      backdrop-filter: blur(2px);
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 35px rgba(52, 102, 153, 0.08);
+      transition: all 0.3s ease;
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: center;
+      border: 1px solid #cde3f5;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #8bb9dc;
+      background: white;
+      box-shadow: 0 28px 36px rgba(44, 125, 160, 0.12);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: #2c7da0;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #1e4a76;
+    }
+
+    .service-tag {
+      display: inline-block;
+      background: #e9f2f9;
+      padding: 5px 12px;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 14px;
+      color: #2c7da0;
+    }
+
+    .repair-highlight {
+      background: #f0f7fe;
+      padding: 70px 0;
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    .repair-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .repair-list li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      color: #1e3a5f;
+    }
+
+    .repair-list i {
+      color: #2c7da0;
+      font-size: 1.3rem;
+      width: 28px;
+    }
+
+    .about {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #1e4a76;
+    }
+
+    .about-text p {
+      color: #2c5282;
+    }
+
+    .signature {
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #2c7da0;
+    }
+
+    /* portfolio */
+    .portfolio {
+      background: #eef5fc;
+      padding: 80px 0;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .port-item {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      width: 280px;
+      box-shadow: 0 12px 24px rgba(52, 102, 153, 0.06);
+      transition: 0.25s;
+      border: 1px solid #d4e6f5;
+      text-align: center;
+    }
+
+    .port-item:hover {
+      transform: scale(1.02);
+      border-color: #8bb9dc;
+    }
+
+    .port-img {
+      background: #e3f0fa;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2c7da0;
+      font-size: 3rem;
+    }
+
+    .port-info {
+      padding: 20px;
+    }
+
+    .port-info h4 {
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+      color: #1e4a76;
+    }
+
+    /* contact */
+    .contact {
+      padding: 80px 0;
+      background: linear-gradient(115deg, #eef5ff 0%, #f5faff 100%);
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 48px;
+      padding: 48px 40px;
+      box-shadow: 0 25px 40px -14px rgba(30, 74, 118, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .contact-left {
+      flex: 1.2;
+    }
+
+    .contact-right {
+      flex: 1;
+      background: #fafdff;
+      border-radius: 32px;
+      padding: 30px;
+      border: 1px solid #d4e6f5;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .contact-detail i {
+      width: 32px;
+      font-size: 1.3rem;
+      color: #2c7da0;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      border: 1px solid #cde0ef;
+      border-radius: 60px;
+      font-family: inherit;
+      outline: none;
+      transition: 0.2s;
+      background: white;
+    }
+
+    form textarea {
+      border-radius: 28px;
+      resize: vertical;
+    }
+
+    form input:focus, form textarea:focus, form select:focus {
+      border-color: #2c7da0;
+      box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.2);
+    }
+
+    .btn-submit {
+      background: #1e4a76;
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 60px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.2s;
+    }
+
+    .btn-submit:hover {
+      background: #2c7da0;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background: #0a2a44;
+      color: #cbe4fe;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-social a {
+      color: #b9d9ff;
+      margin: 0 14px;
+      font-size: 1.6rem;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-3px);
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 20px;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .contact-card {
+        padding: 32px 24px;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .btn-header {
+        padding: 6px 18px;
+        font-size: 0.9rem;
+      }
+      .hero-stats {
+        gap: 16px;
+      }
+      .stat-item h3 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>Achakzai 04</h1>
+        <span>Web Dev + Mobile & Software Repair</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#repair">Repair</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-header">Book Consultation</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-microchip"></i> Expert since 2016</div>
+        <h1>Code, Create & <br> Repair like a Pro</h1>
+        <p>Hi, I'm <strong>Achakzai 04</strong> — professional web developer & certified mobile/software repair engineer. I build stunning websites and fix smartphones & software with precision.</p>
+        <div class="hero-stats">
+          <div class="stat-item"><h3>250+</h3><p>Projects delivered</p></div>
+          <div class="stat-item"><h3>1.2k+</h3><p>Devices repaired</p></div>
+          <div class="stat-item"><h3>98%</h3><p>Satisfaction rate</p></div>
+        </div>
+        <div class="btn-group">
+          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a project</a>
+          <a href="#services" class="btn-outline"><i class="fas fa-cog"></i> My services</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div>
+          <i class="fas fa-laptop-code" style="font-size: 7rem; color: #1e4a76;"></i>
+          <i class="fas fa-mobile-alt" style="font-size: 5rem; color: #2c7da0; margin-left: 15px;"></i>
+          <i class="fas fa-code" style="font-size: 4rem; color: #3b82f6;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">What I offer</h2>
+      <p class="section-sub">From high-performance websites to hardware-level phone repairs & software fixes — all under one roof.</p>
+      <div class="cards-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fab fa-react"></i></div>
+          <h3>Web Development</h3>
+          <p>Modern, responsive websites, e‑commerce, SPAs & custom CMS solutions.</p>
+          <span class="service-tag">React · Vue · Laravel</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile Repair</h3>
+          <p>iPhone, Samsung, Pixel — screen, battery, charging port, water damage.</p>
+          <span class="service-tag">Same-day fix</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Software Repair</h3>
+          <p>OS reinstall, virus removal, driver issues, boot errors, data recovery.</p>
+          <span class="service-tag">Windows · macOS · Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile + Software Repair highlight -->
+  <section id="repair" class="repair-highlight">
+    <div class="container two-col">
+      <div class="col">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; color:#1e4a76;"><i class="fas fa-screwdriver-wrench"></i> Expert Repair Services</h2>
+        <p style="margin-bottom: 20px;">Certified hardware & software specialist. I fix all major brands with genuine parts and provide advanced software troubleshooting.</p>
+        <ul class="repair-list">
+          <li><i class="fas fa-check-circle"></i> Screen Replacement (LCD/OLED)</li>
+          <li><i class="fas fa-check-circle"></i> Battery & Charging Port Repair</li>
+          <li><i class="fas fa-check-circle"></i> Water/Liquid Damage Recovery</li>
+          <li><i class="fas fa-check-circle"></i> Software Glitches & OS Repair</li>
+          <li><i class="fas fa-check-circle"></i> Data Recovery & Virus Removal</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="margin-top: 20px; display: inline-block;">Get instant quote →</a>
+      </div>
+      <div class="col" style="text-align: center;">
+        <i class="fas fa-microscope" style="font-size: 7rem; color: #2c7da0; opacity: 0.8;"></i>
+        <p style="margin-top: 20px; font-weight: 500;">🔧 3 months warranty on repairs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Achakzai 04 -->
+  <section id="about" class="about">
+    <div class="container two-col">
+      <div class="col">
+        <!-- Updated placeholder with blueish tone but same info -->
+        <img src="https://placehold.co/500x400/e3f0fa/1e4a76?text=Achakzai+04+%7C+Pro+Coder+%26+Technician" style="border-radius: 32px; width: 100%; max-width: 400px; box-shadow: 0 12px 28px rgba(30, 74, 118, 0.1);" alt="Achakzai profile">
+      </div>
+      <div class="col about-text">
+        <h3>Meet Achakzai 04</h3>
+        <p>With over 7 years of dual expertise in full‑stack web development and mobile/software repair, I bridge the gap between digital and hardware solutions. I’ve helped startups launch their web presence and restored thousands of devices to perfect working condition.</p>
+        <p>My mission: deliver clean, modern code and fast, reliable repairs — because technology should empower, not frustrate.</p>
+        <div class="signature">— Achakzai 04, Tech Artisan</div>
+        <div style="margin-top: 24px; display: flex; gap: 20px; flex-wrap: wrap;">
+          <i class="fab fa-html5" style="font-size: 2rem; color:#2c7da0;"></i>
+          <i class="fab fa-css3-alt" style="font-size: 2rem; color:#2c7da0;"></i>
+          <i class="fab fa-js" style="font-size: 2rem; color:#2c7da0;"></i>
+          <i class="fab fa-python" style="font-size: 2rem; color:#2c7da0;"></i>
+          <i class="fas fa-microchip" style="font-size: 2rem; color:#2c7da0;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / Recent Work & Repairs: three categories exactly as requested -->
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Recent Work & Repairs</h2>
+      <p class="section-sub">Showcasing my expertise: Web Development, Mobile Repair & Software Repair</p>
+      <div class="portfolio-grid">
+        <!-- Category 1: Web Developer -->
+        <div class="port-item">
+          <div class="port-img"><i class="fas fa-laptop-code" style="font-size: 4rem;"></i></div>
+          <div class="port-info">
+            <h4>Web Developer</h4>
+            <p>Fintech dashboard · E‑commerce platform · React + Node apps</p>
+          </div>
+        </div>
+        <!-- Category 2: Mobile Repair -->
+        <div class="port-item">
+          <div class="port-img"><i class="fas fa-mobile-alt" style="font-size: 4rem;"></i></div>
+          <div class="port-info">
+            <h4>Mobile Repair</h4>
+            <p>iPhone 14 Pro Max screen · Samsung S23 battery · Pixel water damage</p>
+          </div>
+        </div>
+        <!-- Category 3: Software Repair -->
+        <div class="port-item">
+          <div class="port-img"><i class="fas fa-code" style="font-size: 4rem;"></i></div>
+          <div class="port-info">
+            <h4>Software Repair</h4>
+            <p>Windows boot fix · macOS recovery · Virus removal & data rescue</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & consultation -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-left">
+          <h2 style="font-size: 2rem; margin-bottom: 20px; color:#1e4a76;">Let’s talk tech</h2>
+          <p style="margin-bottom: 30px;">Whether you need a blazing fast website or your phone/software revived, reach out — I’ll get back within a few hours.</p>
+          <div class="contact-info">
+            <div class="contact-detail"><i class="fas fa-phone-alt"></i> <span>+92 330 836 3433</span></div>
+            <!-- Updated email address exactly as requested: israrumari0312@gmail.com -->
+            <div class="contact-detail"><i class="fas fa-envelope"></i> <span>israrumari0312@gmail.com</span></div>
+            <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> <span>Karachi / Lahore — On-site & Remote</span></div>
+          </div>
+          <!-- social links exactly as per request: FB, YouTube, Instagram, WhatsApp -->
+          <div style="margin-top: 30px; display: flex; gap: 24px; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/IsrarUmari" target="_blank" style="color: #1e4a76; font-size: 2rem; transition:0.2s"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com/channel/UCgVFLE4jdCyPMWnNQJA12uA?sub-confirmation=1" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/israr_umari?igsh=MWN6cmdzaDluaXM4bQ==" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/923308363433" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <h3 style="color:#1e4a76;">Request a callback / quote</h3>
+          <form id="contactForm" action="#" method="post">
+            <input type="text" placeholder="Your name" id="name" required>
+            <input type="email" placeholder="Email address" id="email" required>
+            <input type="tel" placeholder="Phone (optional)">
+            <select id="serviceSelect">
+              <option value="Web Development">Web Development</option>
+              <option value="Mobile Repair">Mobile Repair</option>
+              <option value="Software Repair">Software Repair</option>
+              <option value="Both services">Both services</option>
+            </select>
+            <textarea rows="3" placeholder="Tell me about your project or repair issue..."></textarea>
+            <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-paper-plane"></i> Send message</button>
+          </form>
+          <p id="formFeedback" style="margin-top: 15px; font-size: 0.85rem; text-align: center;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-social">
+      <!-- Same social links in footer for consistency -->
+      <a href="https://www.facebook.com/IsrarUmari" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/channel/UCgVFLE4jdCyPMWnNQJA12uA?sub-confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/israr_umari?igsh=MWN6cmdzaDluaXM4bQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/923308363433" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top: 20px;">© 2025 Achakzai 04 — Web Dev, Mobile & Software Repair Expert. All repairs and code come with quality assurance.</p>
+    <p style="margin-top: 12px;"><i class="fas fa-code"></i> Built with passion by Achakzai 04</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('formFeedback');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if(name === "" || email === "") {
+      feedback.innerHTML = "⚠️ Please fill in name and email.";
+      feedback.style.color = "#b91c1c";
+      return;
+    }
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = "<i class='fas fa-spinner fa-pulse'></i> Sending...";
+    setTimeout(() => {
+      feedback.innerHTML = "✅ Thanks! Achakzai 04 will contact you shortly via WhatsApp or email.";
+      feedback.style.color = "#15803d";
+      submitBtn.innerHTML = originalText;
+      form.reset();
+    }, 1200);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
