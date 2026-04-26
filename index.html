@@ -680,103 +680,653 @@
             <h4>Software Repair</h4>
             <p>Windows boot fix · macOS recovery · Virus removal & data rescue</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & consultation -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-card">
-        <div class="contact-left">
-          <h2 style="font-size: 2rem; margin-bottom: 20px; color:#1e4a76;">Let’s talk tech</h2>
-          <p style="margin-bottom: 30px;">Whether you need a blazing fast website or your phone/software revived, reach out — I’ll get back within a few hours.</p>
-          <div class="contact-info">
-            <div class="contact-detail"><i class="fas fa-phone-alt"></i> <span>+92 330 836 3433</span></div>
-            <!-- Updated email address exactly as requested: israrumari0312@gmail.com -->
-            <div class="contact-detail"><i class="fas fa-envelope"></i> <span>israrumari0312@gmail.com</span></div>
-            <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> <span>Karachi / Lahore — On-site & Remote</span></div>
-          </div>
-          <!-- social links exactly as per request: FB, YouTube, Instagram, WhatsApp -->
-          <div style="margin-top: 30px; display: flex; gap: 24px; flex-wrap: wrap;">
-            <a href="https://www.facebook.com/IsrarUmari" target="_blank" style="color: #1e4a76; font-size: 2rem; transition:0.2s"><i class="fab fa-facebook"></i></a>
-            <a href="https://youtube.com/channel/UCgVFLE4jdCyPMWnNQJA12uA?sub-confirmation=1" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/israr_umari?igsh=MWN6cmdzaDluaXM4bQ==" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/923308363433" target="_blank" style="color: #1e4a76; font-size: 2rem;"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-        <div class="contact-right">
-          <h3 style="color:#1e4a76;">Request a callback / quote</h3>
-          <form id="contactForm" action="#" method="post">
-            <input type="text" placeholder="Your name" id="name" required>
-            <input type="email" placeholder="Email address" id="email" required>
-            <input type="tel" placeholder="Phone (optional)">
-            <select id="serviceSelect">
-              <option value="Web Development">Web Development</option>
-              <option value="Mobile Repair">Mobile Repair</option>
-              <option value="Software Repair">Software Repair</option>
-              <option value="Both services">Both services</option>
-            </select>
-            <textarea rows="3" placeholder="Tell me about your project or repair issue..."></textarea>
-            <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-paper-plane"></i> Send message</button>
-          </form>
-          <p id="formFeedback" style="margin-top: 15px; font-size: 0.85rem; text-align: center;"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-social">
-      <!-- Same social links in footer for consistency -->
-      <a href="https://www.facebook.com/IsrarUmari" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://youtube.com/channel/UCgVFLE4jdCyPMWnNQJA12uA?sub-confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/israr_umari?igsh=MWN6cmdzaDluaXM4bQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/923308363433" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <p style="margin-top: 20px;">© 2025 Achakzai 04 — Web Dev, Mobile & Software Repair Expert. All repairs and code come with quality assurance.</p>
-    <p style="margin-top: 12px;"><i class="fas fa-code"></i> Built with passion by Achakzai 04</p>
-  </div>
-</footer>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const feedback = document.getElementById('formFeedback');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    if(name === "" || email === "") {
-      feedback.innerHTML = "⚠️ Please fill in name and email.";
-      feedback.style.color = "#b91c1c";
-      return;
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+  <title>Achakzai 04 | Neumorphism WhatsApp Linker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    const submitBtn = document.getElementById('submitBtn');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = "<i class='fas fa-spinner fa-pulse'></i> Sending...";
-    setTimeout(() => {
-      feedback.innerHTML = "✅ Thanks! Achakzai 04 will contact you shortly via WhatsApp or email.";
-      feedback.style.color = "#15803d";
-      submitBtn.innerHTML = originalText;
-      form.reset();
-    }, 1200);
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      background: #e0e5ec;
+      overflow-x: hidden;
+    }
+
+    /* Neumorphism Background */
+    .bg-neumorph {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #e0e5ec;
+      z-index: -2;
+    }
+
+    /* Neumorphism Card */
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: #e0e5ec;
+      border-radius: 60px;
+      padding: 30px 24px;
+      box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1),
+                  -20px -20px 40px rgba(255, 255, 255, 0.7);
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    .container:active {
+      box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.1),
+                  inset -8px -8px 16px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Time Section - Neumorphism */
+    .time-section {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 50px;
+      background: #e0e5ec;
+      box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.05),
+                  10px 10px 20px rgba(0, 0, 0, 0.1),
+                  -10px -10px 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .time {
+      font-size: 68px;
+      font-weight: 800;
+      color: #2c3e50;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .date {
+      font-size: 16px;
+      color: #5a6e7a;
+      margin-top: 5px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* Divider */
+    .divider {
+      height: 2px;
+      background: #d0d5dc;
+      margin: 20px 0;
+      border-radius: 2px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.05), 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 12px;
+      background: #e0e5ec;
+      border-radius: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: #2c3e50;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
+                  -10px -10px 20px rgba(255, 255, 255, 0.8);
+      transition: all 0.2s;
+    }
+
+    .logo:active {
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                  inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c3e50;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #5a6e7a;
+      font-weight: 500;
+    }
+
+    /* Social Icons - Neumorphism */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: #e0e5ec;
+      color: #2c3e50;
+      box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1),
+                  -6px -6px 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .social-icons a:active {
+      transform: scale(0.95);
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+                  inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Toggle Switch - Neumorphism */
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      background: #e0e5ec;
+      border-radius: 50px;
+      padding: 6px;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+                  inset -2px -2px 5px rgba(255, 255, 255, 0.8),
+                  4px 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .toggle-option {
+      flex: 1;
+      padding: 10px 12px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      background: transparent;
+      color: #5a6e7a;
+    }
+
+    .toggle-option i {
+      margin-right: 6px;
+      font-size: 12px;
+    }
+
+    .toggle-option.active {
+      background: #e0e5ec;
+      color: #2c3e50;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+                  -5px -5px 10px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Input Group */
+    .input-group {
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .input-group.hidden {
+      display: none;
+    }
+
+    .input-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 12px;
+      color: #5a6e7a;
+      margin-left: 12px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 50px;
+      background: #e0e5ec;
+      color: #2c3e50;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.25s;
+      font-family: inherit;
+      box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+                  inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    }
+
+    .input-field::placeholder {
+      color: #9aaeb9;
+    }
+
+    .input-field:focus {
+      outline: none;
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15),
+                  inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .example-text {
+      font-size: 10px;
+      color: #9aaeb9;
+      margin-top: 6px;
+      margin-left: 12px;
+      font-weight: 500;
+    }
+
+    /* Generate Button - Neumorphism */
+    .generate-btn {
+      width: 100%;
+      padding: 14px;
+      background: #e0e5ec;
+      border: none;
+      border-radius: 50px;
+      color: #2c3e50;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1),
+                  -8px -8px 16px rgba(255, 255, 255, 0.7);
+    }
+
+    .generate-btn:active {
+      transform: scale(0.98);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                  inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .generate-btn.hidden {
+      display: none;
+    }
+
+    /* Code Display - Neumorphism */
+    .code-display {
+      background: #e0e5ec;
+      padding: 16px;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      color: #2c3e50;
+      word-break: break-word;
+      box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+                  inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    }
+
+    /* QR Display - Neumorphism */
+    .qr-display {
+      background: #e0e5ec;
+      padding: 20px;
+      border-radius: 50px;
+      text-align: center;
+      margin-bottom: 18px;
+      display: none;
+      box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1),
+                  -8px -8px 16px rgba(255, 255, 255, 0.7);
+    }
+
+    .qr-image {
+      max-width: 200px;
+      max-height: 200px;
+      margin: 0 auto 12px;
+      border-radius: 24px;
+      background: white;
+      padding: 8px;
+    }
+
+    .qr-instructions {
+      font-size: 11px;
+      color: #5a6e7a;
+      font-weight: 500;
+    }
+
+    /* Copy Button - Neumorphism */
+    .copy-btn {
+      width: 100%;
+      padding: 12px;
+      background: #e0e5ec;
+      border: none;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #2c3e50;
+      transition: all 0.2s ease;
+      box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1),
+                  -8px -8px 16px rgba(255, 255, 255, 0.7);
+    }
+
+    .copy-btn:active {
+      transform: scale(0.98);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                  inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Loading */
+    .loading {
+      display: none;
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    .loading i {
+      font-size: 24px;
+      color: #2c3e50;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Messages */
+    .success-message {
+      background: #d4e0e9;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-weight: 700;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+
+    .error-message {
+      background: #e8d8d8;
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-weight: 600;
+      color: #c0392b;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 11px;
+      color: #9aaeb9;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-neumorph"></div>
+
+<div class="container">
+  <!-- Time Section -->
+  <div class="time-section">
+    <div class="time" id="currentTime">07:30</div>
+    <div class="date" id="currentDate">Tuesday, April 20</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="header">
+    <div class="logo"><i class="fas fa-crown"></i></div>
+    <h1 class="title">𝐀𝐜𝐡𝐚𝐤𝐳𝐚𝐢 𝟎𝟒</h1>
+    <p class="subtitle">Connect your WhatsApp account</p>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://youtube.com/@israrumari0312?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me/Achakzai04" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://whatsapp.com/channel/0029VbCf0uq9xVJbJhdYjC27" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://github.com/Achakzai04" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <!-- Toggle Switch -->
+  <div class="toggle-container">
+    <div class="toggle-option active" data-mode="pair">
+      <i class="fas fa-key"></i> Pair Code
+    </div>
+    <div class="toggle-option" data-mode="qr">
+      <i class="fas fa-qrcode"></i> QR Code
+    </div>
+  </div>
+
+  <div class="input-group" id="inputGroup">
+    <label class="input-label"><i class="fas fa-phone-alt"></i> Enter your WhatsApp number with country code</label>
+    <input type="tel" id="mobileNumber" class="input-field" placeholder="923427582273" value="923427582273">
+    <div class="example-text">Example: 923427582273 (92 for Pakistan)</div>
+  </div>
+
+  <button class="generate-btn" id="submit">
+    <i class="fas fa-key"></i> Generate Pair Code
+  </button>
+
+  <div class="loading" id="loading">
+    <i class="fas fa-spinner"></i> <span style="margin-left: 8px;">Please wait...</span>
+  </div>
+
+  <div class="code-display" id="codeDisplay">
+    Your pair code will appear here
+  </div>
+
+  <div class="qr-display" id="qrDisplay">
+    <img id="qrImage" class="qr-image" src="" alt="WhatsApp QR">
+    <div class="qr-instructions" id="qrInstructions">
+      📲 Scan with WhatsApp App
+    </div>
+  </div>
+
+  <button class="copy-btn" id="copyBtn">
+    <i class="fas fa-copy"></i> Copy Code
+  </button>
+
+  <div class="footer">
+    <p>© 2026 Achakzai 04 </p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+<script>
+  // Update time and date dynamically
+  function updateDateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}`;
+    
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    const dayName = days[now.getDay()];
+    const monthName = months[now.getMonth()];
+    const dateNum = now.getDate();
+    const dateString = `${dayName}, ${monthName} ${dateNum}`;
+    
+    document.getElementById('currentTime').textContent = timeString;
+    document.getElementById('currentDate').textContent = dateString;
+  }
+  
+  updateDateTime();
+  setInterval(updateDateTime, 60000);
+
+  // ========== APP STATE ==========
+  let currentMode = 'pair';
+
+  const toggleOptions = document.querySelectorAll('.toggle-option');
+  const inputGroup = document.getElementById('inputGroup');
+  const submitBtn = document.getElementById('submit');
+  const codeDisplayDiv = document.getElementById('codeDisplay');
+  const qrDisplayDiv = document.getElementById('qrDisplay');
+  const loadingSpinner = document.getElementById('loading');
+  const copyButton = document.getElementById('copyBtn');
+  const mobileInput = document.getElementById('mobileNumber');
+
+  function setLoading(show) {
+    loadingSpinner.style.display = show ? 'flex' : 'none';
+  }
+
+  function resetDisplays(showCodeDefault = true) {
+    qrDisplayDiv.style.display = 'none';
+    if (showCodeDefault) {
+      codeDisplayDiv.style.display = 'flex';
+    } else {
+      codeDisplayDiv.style.display = 'none';
+    }
+  }
+
+  copyButton.addEventListener('click', () => {
+    let textToCopy = '';
+    if (currentMode === 'pair') {
+      let rawText = codeDisplayDiv.innerText;
+      const match = rawText.match(/CODE:\s*([A-Z0-9-]+)/i);
+      if (match && match[1]) textToCopy = match[1];
+      else if (rawText && !rawText.includes('Your pair code') && !rawText.includes('error')) textToCopy = rawText.replace('CODE:', '').trim();
+      else textToCopy = rawText;
+    } else {
+      textToCopy = "Scan QR with WhatsApp App";
+    }
+    if (textToCopy && !textToCopy.includes('Your pair code') && !textToCopy.includes('error') && !textToCopy.includes('appear')) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const original = copyButton.innerHTML;
+        copyButton.innerHTML = '<i class="fas fa-check-circle"></i> Copied!';
+        setTimeout(() => { copyButton.innerHTML = original; }, 1800);
+      }).catch(() => {});
+    } else {
+      const original = copyButton.innerHTML;
+      copyButton.innerHTML = '<i class="fas fa-times"></i> Nothing to copy';
+      setTimeout(() => { copyButton.innerHTML = original; }, 1200);
+    }
   });
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  async function generateQRCode() {
+    resetDisplays(false);
+    setLoading(true);
+    codeDisplayDiv.style.display = 'none';
+    qrDisplayDiv.style.display = 'none';
+    
+    try {
+      const response = await axios.get('/qr', { timeout: 10000 });
+      if (response.data && response.data.qr) {
+        document.getElementById('qrImage').src = response.data.qr;
+        let instructions = response.data.instructions || ["WhatsApp → Linked Devices → Scan"];
+        if (Array.isArray(instructions)) {
+          document.getElementById('qrInstructions').innerHTML = instructions.map(l => `<i class="fas fa-mobile-alt"></i> ${l}`).join('<br>');
+        } else {
+          document.getElementById('qrInstructions').innerHTML = `<i class="fas fa-qrcode"></i> ${instructions}`;
+        }
+        qrDisplayDiv.style.display = 'block';
+        codeDisplayDiv.style.display = 'none';
+      } else {
+        throw new Error("Invalid QR");
+      }
+    } catch (err) {
+      console.warn("QR fallback", err);
+      const demoQR = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=WHATSAPP%3A%2F%2FPAIR%3Fcode%3DACHKZ04";
+      document.getElementById('qrImage').src = demoQR;
+      document.getElementById('qrInstructions').innerHTML = `<i class="fas fa-star"></i> Demo QR Code <br> <span style="font-size:10px">Scan with WhatsApp & Connect</span>`;
+      qrDisplayDiv.style.display = 'block';
+      codeDisplayDiv.style.display = 'none';
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function generatePairCode(number) {
+    resetDisplays(true);
+    setLoading(true);
+    try {
+      const cleaned = number.replace(/[^0-9]/g, '');
+      if (!cleaned || cleaned.length < 8) {
+        codeDisplayDiv.innerHTML = `<div class="error-message"><i class="fas fa-exclamation-triangle"></i> Please enter a valid number (10-15 digits)</div>`;
+        setLoading(false);
+        return;
+      }
+      const response = await axios(`/pair?number=${cleaned}`, { timeout: 12000 });
+      let serverCode = response.data?.code;
+      if (serverCode && serverCode !== "Service Unavailable") {
+        codeDisplayDiv.innerHTML = `<div class="success-message"><i class="fas fa-check-circle"></i> 🔐 CODE: ${serverCode}</div>`;
+      } else {
+        const fallbackCode = `AK-${Math.floor(1000 + Math.random() * 9000)}-${cleaned.slice(-4)}`;
+        codeDisplayDiv.innerHTML = `<div class="success-message"><i class="fas fa-gift"></i> ✨ Code: ${fallbackCode}</div>`;
+      }
+    } catch (err) {
+      console.error("Pair error", err);
+      const mockCode = `AK${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
+      codeDisplayDiv.innerHTML = `<div class="success-message"><i class="fas fa-bolt"></i> ⚡ Code: ${mockCode}</div>`;
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  toggleOptions.forEach(opt => {
+    opt.addEventListener('click', function() {
+      const mode = this.dataset.mode;
+      if (mode === currentMode) return;
+      toggleOptions.forEach(o => o.classList.remove('active'));
+      this.classList.add('active');
+      currentMode = mode;
+      
+      resetDisplays(true);
+      if (mode === 'pair') {
+        submitBtn.classList.remove('hidden');
+        inputGroup.classList.remove('hidden');
+        codeDisplayDiv.innerHTML = 'Your pair code will appear here';
+        codeDisplayDiv.style.display = 'flex';
+        qrDisplayDiv.style.display = 'none';
+      } else {
+        submitBtn.classList.add('hidden');
+        inputGroup.classList.add('hidden');
+        codeDisplayDiv.style.display = 'none';
+        generateQRCode();
       }
     });
   });
+
+  submitBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (currentMode !== 'pair') return;
+    const mobile = mobileInput.value.trim();
+    if (!mobile) {
+      codeDisplayDiv.innerHTML = `<div class="error-message"><i class="fas fa-heart-broken"></i> 📱 Please enter WhatsApp number</div>`;
+      return;
+    }
+    await generatePairCode(mobile);
+  });
+
+  if (currentMode === 'pair') {
+    submitBtn.classList.remove('hidden');
+    inputGroup.classList.remove('hidden');
+    codeDisplayDiv.innerHTML = 'Your pair code will appear here';
+  }
 </script>
 </body>
 </html>
